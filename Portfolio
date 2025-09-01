@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    /* Βασικό στυλ σε όλη τη σελίδα */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Κεντρικό container */
+    .container {
+      width: 80%;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    /* Projects list */
+    h2 {
+      border-bottom: 2px solid #555;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 15px 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    ul li a:hover {
+      color: #ff6600;
+    }
+
+    /* Contact */
+    .contact {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .contact a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      color: #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi, I'm George 👋</h1>
+    <p>Game Developer | Unity & Unreal Engine</p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://mega.nz/folder/eMdSSKhY#cMiWxkgaPNW_0RJrNPA7PA">Unreal - First Person Horror Game</a></li>
+      <li><a href="https://mega.nz/folder/PNU2RKhB#nF8B2VjFAsTZZCIa0ThNAw">Unreal - Third Person Action-Horror Game</a></li>
+      <li><a href="https://mega.nz/folder/PckQwIzR#5rSf2Lhk5F-BWietTkeDnw">Unreal - Third Person RPG Game</a></li>
+      <li><a href="https://mega.nz/file/bRdzjZLY#a5kuczDABpT2DOYOQkfoNgVatthCuZJPf1HMjjqrc8I">Unity - First Person Horror Game - PC/VR Edition</a></li>
+    </ul>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:george200141@gmail.com">george200141@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
