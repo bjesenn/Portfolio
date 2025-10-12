@@ -2,102 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>George Christopoulos – Game Developer</title>
   <style>
-    /* Βασικό στυλ σε όλη τη σελίδα */
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f4f9;
+      background-color: #121212;
+      color: #e0e0e0;
       margin: 0;
       padding: 0;
-      color: #333;
       line-height: 1.6;
     }
 
-    /* Κεντρικό container */
     .container {
       width: 80%;
       max-width: 900px;
       margin: auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
-    /* Header */
     h1 {
       text-align: center;
-      margin-top: 30px;
-      font-size: 2.5rem;
-      color: #222;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
     }
 
-    p {
+    .subtitle {
       text-align: center;
       font-size: 1.1rem;
-      margin-bottom: 40px;
+      color: #bdbdbd;
+      margin-bottom: 50px;
     }
 
-    /* Projects list */
     h2 {
-      border-bottom: 2px solid #555;
+      border-bottom: 1px solid #333;
       padding-bottom: 5px;
       margin-top: 40px;
-      color: #444;
+      color: #ffffff;
+      font-weight: 500;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
     }
 
-    ul li {
-      margin: 15px 0;
+    .project-card {
+      background-color: #1e1e1e;
+      padding: 15px 20px;
+      border-radius: 6px;
+      transition: transform 0.2s, background-color 0.2s;
     }
 
-    ul li a {
+    .project-card:hover {
+      transform: translateY(-3px);
+      background-color: #262626;
+    }
+
+    .project-card a {
+      color: #4da3ff;
       text-decoration: none;
-      color: #0056b3;
       font-weight: bold;
-      transition: color 0.3s;
     }
 
-    ul li a:hover {
-      color: #ff6600;
+    .project-card a:hover {
+      color: #ff8800;
     }
 
-    /* Contact */
     .contact {
-      margin-top: 40px;
       text-align: center;
-      font-size: 1.1rem;
+      margin-top: 50px;
     }
 
     .contact a {
-      color: #0056b3;
+      color: #4da3ff;
       text-decoration: none;
       font-weight: bold;
     }
 
     .contact a:hover {
-      color: #ff6600;
+      color: #ff8800;
+    }
+
+    .cv-button {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #ffffff;
+      color: #121212;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .cv-button:hover {
+      background-color: #ff8800;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Hi, I'm George 👋</h1>
-    <p>Game Developer | Unity & Unreal Engine</p>
+    <h1>George Christopoulos – Game Developer</h1>
+    <p class="subtitle">Unity & Unreal Engine Specialist · Horror / Action / RPG Games</p>
 
     <h2>Projects</h2>
-    <ul>
-      <li><a href="https://mega.nz/folder/eMdSSKhY#cMiWxkgaPNW_0RJrNPA7PA">Unreal - First Person Horror Game</a></li>
-      <li><a href="https://mega.nz/folder/PNU2RKhB#nF8B2VjFAsTZZCIa0ThNAw">Unreal - Third Person Action-Horror Game</a></li>
-      <li><a href="https://mega.nz/folder/PckQwIzR#5rSf2Lhk5F-BWietTkeDnw">Unreal - Third Person RPG Game</a></li>
-      <li><a href="https://mega.nz/file/bRdzjZLY#a5kuczDABpT2DOYOQkfoNgVatthCuZJPf1HMjjqrc8I">Unity - First Person Horror Game - PC/VR Edition</a></li>
-    </ul>
+    <div class="projects">
+      <div class="project-card"><a href="https://mega.nz/folder/eMdSSKhY#cMiWxkgaPNW_0RJrNPA7PA">Unreal - First Person Horror Game</a></div>
+      <div class="project-card"><a href="https://mega.nz/folder/PNU2RKhB#nF8B2VjFAsTZZCIa0ThNAw">Unreal - Third Person Action-Horror Game</a></div>
+      <div class="project-card"><a href="https://mega.nz/folder/PckQwIzR#5rSf2Lhk5F-BWietTkeDnw">Unreal - Third Person RPG Game</a></div>
+      <div class="project-card"><a href="https://mega.nz/file/bRdzjZLY#a5kuczDABpT2DOYOQkfoNgVatthCuZJPf1HMjjqrc8I">Unity - First Person Horror Game - PC/VR Edition</a></div>
+      <div class="project-card"><a href="https://mega.nz/fm/qI9yTKgR">Oblivion (Unreal Engine)</a></div>
+    </div>
 
     <div class="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:george200141@gmail.com">george200141@gmail.com</a></p>
+      <a class="cv-button" href="George Christopoulos Resume.pdf" download>Download CV</a>
     </div>
   </div>
 </body>
