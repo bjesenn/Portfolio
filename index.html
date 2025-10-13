@@ -107,14 +107,42 @@
 <body>
 
   <!-- Background Music -->
-  <audio id="bg-music" autoplay loop controls style="position: fixed; bottom: 20px; left: 20px; width: 200px; opacity: 0.8;">
-    <source src="dark-ambient-soundscape-music-409350.mp3" type="audio/mpeg">
-  </audio>
+ <!-- Background Music (Autoplays + Fade-in) -->
+<audio id="bg-music" autoplay loop muted>
+  <source src="dark-ambient-soundscape-music-409350.mp3" type="audio/mpeg">
+</audio>
 
-  <script>
-    var audio = document.getElementById("bg-music");
-    audio.volume = 0.5; // Set initial volume to 50%
-  </script>
+<script>
+  const audio = document.getElementById("bg-music");
+  audio.volume = 0; // Start silent
+
+  // Try playing immediately
+  audio.play().then(() => {
+    // After autoplay, do fade-in
+    let targetVolume = 0.5; // Final volume
+    let fadeSpeed = 0.01;  // Increment per frame
+
+    let fadeIn = setInterval(() => {
+      if (audio.volume < targetVolume) {
+        audio.volume = Math.min(audio.volume + fadeSpeed, targetVolume);
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 100); // Every 100ms
+  }).catch(() => {
+    // If browser still blocks autoplay, unmute once user interacts
+    window.addEventListener('click', () => {
+      audio.muted = false;
+      audio.play();
+    }, { once: true });
+  });
+
+  // Unmute after fade begins
+  setTimeout(() => {
+    audio.muted = false;
+  }, 500);
+</script>
+
 
   <div class="container">
     <h1>George Christopoulos – Game Developer</h1>
