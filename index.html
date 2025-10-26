@@ -55,12 +55,12 @@
     }
 
     .project-card {
-  background-color: rgba(30, 30, 30, 0.3); 
+  background-color: rgba(30, 30, 30, 0); /* 0 = πλήρης διαφάνεια */
   padding: 15px 20px;
   border-radius: 6px;
   transition: transform 0.2s, background-color 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.1); 
-  backdrop-filter: blur(6px); 
+  border: 1px solid rgba(255, 255, 255, 0.1); /* λεπτό περίγραμμα για οπτικό διαχωρισμό */
+  backdrop-filter: blur(4px); /* κάνει ελαφρύ blur στο φόντο πίσω από το card */ 
 }
 
     .project-card:hover {
